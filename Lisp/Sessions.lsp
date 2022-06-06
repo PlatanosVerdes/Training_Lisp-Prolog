@@ -114,8 +114,7 @@
     )
 )
 
-;Definir la funció rdc que torna tots els elements
-;d’una llista menys el darrer
+;Definir la funció rdc que torna tots els elements d’una llista menys el darrer
 (defun rdc (l)
     (cond 
         ;LISTA SOLO TIENE UN ELEMENTO
@@ -125,8 +124,7 @@
 )
 (rdc '(a b c))
 
-;Definir la funció snoc que afegeix un element al
-;final d’una llista
+;Definir la funció snoc que afegeix un element al final d’una llista
 (defun snoc (e l)
     (cond 
         ;Lista vacia, poner elemento
