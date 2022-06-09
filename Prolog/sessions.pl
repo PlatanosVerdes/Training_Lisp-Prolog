@@ -146,7 +146,21 @@ descomprimir([X|[Y|L]],R):-
 %14.Convertir un número binari a decimal
 %?- decimal([1,1,0,1], N).
 %N=13
+decimal(L,N):-
+    reverse(L,L1),
+    aDecimal(L1,N).
+aDecimal([],0).
+aDecimal([X|L],N):-
+    aDecimal(L,N1),
+    N is N1*2+X.
 
 %15.Convertir un número en base 10 a base 2:
 %?-binari(18, B).
 %B=[1,0,0,1,0]
+binari(1,[1]):-!.
+binari(0,[0]):-!.
+binari(X,B):-
+    R is mod(X,2),
+    Q is X//2,
+    binari(Q,B1),
+    append(B1,[R],B),!.
