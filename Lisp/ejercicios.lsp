@@ -43,7 +43,7 @@
 ;(rotaresquerra '(a b c d e f))
 ;(b c d e f a)
 (defun rotaresquerra (l)
-    (cons (cdr l) (car l))
+    (append (cdr l) (list (car l)))
 )
 
 ;5.Sumar tots els elements de les posicions parelles d'una llista
