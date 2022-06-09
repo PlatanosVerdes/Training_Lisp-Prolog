@@ -3,7 +3,7 @@
 (defun aplanar (l)
     (cond
         ((null (cdr l)) l)
-        ((listp (car l)) (aplanar (car l)) (aplanar (cdr l)))
+        ((listp (car l)) (append (aplanar (car l)) (aplanar (cdr l))))
         (t (cons (car l) (aplanar (cdr l))))
     )
 )
